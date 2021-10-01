@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   const { host } = req.headers;
-  res.status(200).json({ message: 'Welcome to the Factorial calculator 🎊', docs: `${host}/docs` });
+  res.status(200).json({ message: 'Welcome to the Factorial calculator 🎊', docs: `http://${host}/docs` });
 });
 
 app.get('/docs', (req, res) => {
@@ -30,7 +30,7 @@ app.get('/factorial/:number', (req, res) => {
 
 app.get('*', (req, res) => {
   const { host } = req.headers;
-  res.status(404).json({ message: 'Resource not found.', docs: `${host}/docs` });
+  res.status(404).json({ message: 'Resource not found.', docs: `http://${host}/docs` });
 });
 
 const port = process.env.PORT || 3000;
