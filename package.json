@@ -12,8 +12,8 @@
     "url": "git+https://github.com/123MwanjeMike/cicd-with-herokuci.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mike Mwanje",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/123MwanjeMike/cicd-with-herokuci/issues"
   },
