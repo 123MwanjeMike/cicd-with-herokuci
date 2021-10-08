@@ -1,11 +1,14 @@
 const express = require('express');
-const factorial = require('./factorial');
+const { factorial } = require('./factorial');
 
 const app = express();
 
 app.get('/', (req, res) => {
   const { host } = req.headers;
-  res.status(200).json({ message: 'Welcome to the Factorial calculator 🎊', docs: `http://${host}/docs` });
+  res.status(200).json({
+    message: 'Welcome to the Factorial calculator 🎊',
+    docs: `http://${host}/docs`,
+  });
 });
 
 app.get('/docs', (req, res) => {
@@ -23,14 +26,26 @@ app.get('/docs', (req, res) => {
 
 app.get('/factorial/:number', (req, res) => {
   const { number } = req.params;
-  if (isNaN(number)) return res.status(400).json({ message: `'${req.params.number}' is not a number.` });
-  if (number > 200) return res.status(200).json({ message: `The factorial of ${number} is Infinity` });
-  return res.status(200).json({ message: `The factorial of ${number} is ${factorial(number)}` });
+  if (isNaN(number)) {
+    return res
+      .status(400)
+      .json({ message: `'${req.params.number}' is not a number.` });
+  }
+  if (number > 200) {
+    return res
+      .status(200)
+      .json({ message: `The factorial of ${number} is Infinity` });
+  }
+  return res
+    .status(200)
+    .json({ message: `The factorial of ${number} is ${factorial(number)}` });
 });
 
 app.get('*', (req, res) => {
   const { host } = req.headers;
-  res.status(404).json({ message: 'Resource not found.', docs: `http://${host}/docs` });
+  res
+    .status(404)
+    .json({ message: 'Resource not found.', docs: `http://${host}/docs` });
 });
 
 const port = process.env.PORT || 3000;
