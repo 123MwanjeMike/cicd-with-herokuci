@@ -1,0 +1,24 @@
+{
+  "name": "cicd-with-herokuci",
+  "version": "1.0.0",
+  "description": "CI/CD workflow with Heroku CI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockcoolsaint/cicd-with-herokuci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rockcoolsaint/cicd-with-herokuci/issues"
+  },
+  "homepage": "https://github.com/rockcoolsaint/cicd-with-herokuci#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
