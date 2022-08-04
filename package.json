@@ -1,0 +1,28 @@
+{
+  "name": "touch_cicd_with_herokuci",
+  "version": "1.0.0",
+  "description": "CI/CD workflow with Heroku CI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.test.js || true",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khchoi0/touch_cicd_with_herokuci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khchoi0/touch_cicd_with_herokuci/issues"
+  },
+  "homepage": "https://github.com/khchoi0/touch_cicd_with_herokuci#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
