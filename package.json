@@ -4,21 +4,25 @@
   "description": "CI/CD workflow with Heroku CI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha *.test.js || true",
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k-zehnder/cicd-with-herokuci.git"
+    "url": "git+https://github.com/123MwanjeMike/cicd-with-herokuci.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mike Mwanje",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k-zehnder/cicd-with-herokuci/issues"
+    "url": "https://github.com/123MwanjeMike/cicd-with-herokuci/issues"
   },
-  "homepage": "https://github.com/k-zehnder/cicd-with-herokuci#readme",
+  "homepage": "https://github.com/123MwanjeMike/cicd-with-herokuci#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2"
   }
 }
